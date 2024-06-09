@@ -1,0 +1,749 @@
+{
+	"info": {
+		"_postman_id": "0dbc062e-4e79-4fc7-9bfe-296eea338a52",
+		"name": "Trackify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20647706"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "user details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjgyODMsImV4cCI6MTcxMzg3MzA4M30.E17MaHEdi5bQrCeAsPNR1AQTylfcrlfe6rNpxpTAwLU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john2\",\r\n    \"firstName\": \"Mujtaba\",\r\n    \"lastName\": \"Shafiq\",\r\n    \"contactNumber\": \"+92 123123123\",\r\n    \"position\": \"airport\",\r\n    \"password\": \"password@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john2\",\r\n    \"password\": \"password@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john1\",\r\n    \"firstName\": \"Mujtaba\",\r\n    \"lastName\": \"Shafiq\",\r\n    \"contactNumber\": \"+92 123123123\",\r\n    \"position\": \"minecraft\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "grant admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTIzMzA4ODEsImV4cCI6MTcxMjkzNTY4MX0.Q4kND92d-E6IyXWdRJwZX3eZEIynkaqTULIfsY_EqAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john1\",\r\n    \"firstName\": \"Mujtaba\",\r\n    \"lastName\": \"Shafiq\",\r\n    \"contactNumber\": \"+92 123123123\",\r\n    \"position\": \"airport\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/grant-admin/66101233201362f6e7b1471f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"grant-admin",
+								"66101233201362f6e7b1471f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isApproved status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTIzMzA4ODEsImV4cCI6MTcxMjkzNTY4MX0.Q4kND92d-E6IyXWdRJwZX3eZEIynkaqTULIfsY_EqAw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john1\",\r\n    \"firstName\": \"Mujtaba\",\r\n    \"lastName\": \"Shafiq\",\r\n    \"contactNumber\": \"+92 123123123\",\r\n    \"position\": \"airport\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/approve/66101233201362f6e7b1471f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"approve",
+								"66101233201362f6e7b1471f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Faces",
+			"item": [
+				{
+					"name": "get user faces images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/face/user/661018205f26df842256dad5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"face",
+								"user",
+								"661018205f26df842256dad5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get face by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/face/661ead3591f41952cff3b8b5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+	
+								"face",
+								"661ead3591f41952cff3b8b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create user face",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/mujta/Downloads/images/sydney-beach-clean-up-1170x658.jpg",
+										"/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg",
+										"/C:/Users/mujta/Downloads/images/unnamed.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/face",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"face"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/mujta/Downloads/images/sydney-beach-clean-up-1170x658.jpg",
+										"/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg",
+										"/C:/Users/mujta/Downloads/images/unnamed.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/face/661ead3591f41952cff3b8b5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"face",
+								"661ead3591f41952cff3b8b5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete face image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/mujta/Downloads/images/sydney-beach-clean-up-1170x658.jpg",
+										"/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg",
+										"/C:/Users/mujta/Downloads/images/unnamed.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/face/661ead3591f41952cff3b8b5/661ead3591f41952cff3b8b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"face",
+								"661ead3591f41952cff3b8b5",
+								"661ead3591f41952cff3b8b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user face",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/mujta/Downloads/images/sydney-beach-clean-up-1170x658.jpg",
+										"/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg",
+										"/C:/Users/mujta/Downloads/images/unnamed.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/face/661ead3591f41952cff3b8b5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"face",
+								"661ead3591f41952cff3b8b5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Baggages",
+			"item": [
+				{
+					"name": "get user baggages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/baggage/user/661018205f26df842256dad5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"baggage",
+								"user",
+								"661018205f26df842256dad5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get baggage by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/baggage/661ebf60396806c7c655e31b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"baggage",
+								"661ebf60396806c7c655e31b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create baggage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg"
+								},
+								{
+									"key": "color",
+									"value": "orange",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "medium",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "brand",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/baggage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"baggage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updated baggage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg"
+								},
+								{
+									"key": "color",
+									"value": "orange",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "medium",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "brand",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/baggage/661ebf60396806c7c655e31b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"baggage",
+								"661ebf60396806c7c655e31b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete baggage image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/mujta/Downloads/images/sydney-beach-clean-up-1170x658.jpg",
+										"/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg",
+										"/C:/Users/mujta/Downloads/images/unnamed.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/baggage/661ebf60396806c7c655e31b/661ebf60396806c7c655e31c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"baggage",
+								"661ebf60396806c7c655e31b",
+								"661ebf60396806c7c655e31c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete baggage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTAxODIwNWYyNmRmODQyMjU2ZGFkNSIsInVzZXJuYW1lIjoiam9objIiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3MTMyNjg0NjUsImV4cCI6MTcxMzg3MzI2NX0.zh_Y1vbUERjpVEl3mJx6VyDO4lxZeXzHOPE4UyFGg48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"/C:/Users/mujta/Downloads/images/sydney-beach-clean-up-1170x658.jpg",
+										"/C:/Users/mujta/Downloads/images/tree-736885_1280.jpg",
+										"/C:/Users/mujta/Downloads/images/unnamed.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/baggage/661ebf60396806c7c655e31b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"baggage",
+								"661ebf60396806c7c655e31b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
